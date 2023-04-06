@@ -1,0 +1,13 @@
+//order by custmofield
+<div id="sortby"> Ordenar por: &nbsp;
+        <select class="dropdown-class" name="orderby" id="orderby" onchange="document.location.search=this.options[this.selectedIndex].value;">
+        <option value=" " selected>Seleccionar</option>
+        <option <?php if( isset($_GET["orderby"]) && trim($_GET["orderby"]) == 'pudate' && isset($_GET["order"]) && trim($_GET["order"]) == 'DESC' ){ echo 'selected'; } ?> value="?orderby=pubdate&order=DESC">Por fecha, descendente</option>
+        <option <?php if( isset($_GET["orderby"]) && trim($_GET["orderby"]) == 'pubdate' && isset($_GET["order"]) && trim($_GET["order"]) == 'ASC' ){ echo 'selected'; } ?>  value="?orderby=pubdate&order=ASC">Por fecha, ascendente</option>
+    <option <?php if( isset($_GET["orderby"]) && trim($_GET["orderby"]) == 'title' && isset($_GET["order"]) && trim($_GET["order"]) == 'ASC' ){ echo 'selected'; } ?> value="?orderby=title&order=ASC" value="?orderby=title&order=ASC">Por título, A-Z Ascendente</option>
+        <option <?php if( isset($_GET["orderby"]) && trim($_GET["orderby"]) == 'title' && isset($_GET["order"]) && trim($_GET["order"]) == 'DESC' ){ echo 'selected'; } ?>  value="?orderby=title&order=DESC">Por título, Z-A Descendente</option>
+        <option <?php if( isset($_GET["orderby"]) && trim($_GET["orderby"]) == 'autor' && isset($_GET["order"]) && trim($_GET["order"]) == 'ASC' ){ echo 'selected'; } ?> value="?orderby=autor&order=ASC">Por autor, A-Z, Ascendente</option>
+        <option <?php if( isset($_GET["orderby"]) && trim($_GET["orderby"]) == 'autor' && isset($_GET["order"]) && trim($_GET["order"]) == 'DESC' ){ echo 'selected'; } ?> value="?orderby=autor&order=DESC">Por autor, Z-A, Descendente</option>
+
+        </select>
+ </div>
